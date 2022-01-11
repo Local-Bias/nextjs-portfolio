@@ -12,7 +12,7 @@ const Component: VFCX<Props> = ({ className }) => (
       <h1>Ribbit</h1>
       <p>Front-End Engineer. Open source contributor</p>
       <div className='contact-button'>
-        <GlassButton>Contact</GlassButton>
+        <GlassButton disabled>Contact</GlassButton>
       </div>
     </Glass>
   </div>
