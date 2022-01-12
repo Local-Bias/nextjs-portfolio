@@ -1,23 +1,18 @@
-import React, { VFC, VFCX } from 'react';
-import styled from '@emotion/styled';
+import React, { VFC } from 'react';
 
+import Layout from './layout';
 import BackgroundImage from './background-image';
-import Introduction from './introduction';
+import Charts from './charts';
+import Qualifications from './qualifications';
 
-type ContainerProps = Readonly<{}>;
-type Props = ContainerProps & Readonly<{}>;
-
-const Component: VFCX<Props> = ({ className }) => (
-  <div {...{ className }}>
+const Component: VFC = () => (
+  <>
     <BackgroundImage />
-    <Introduction />
-  </div>
+    <Layout>
+      <Qualifications />
+      <Charts />
+    </Layout>
+  </>
 );
 
-const StyledComponent = styled(Component)``;
-
-const Container: VFC<ContainerProps> = () => {
-  return <StyledComponent />;
-};
-
-export default Container;
+export default Component;

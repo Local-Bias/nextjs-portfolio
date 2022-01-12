@@ -28,7 +28,7 @@ const StyledComponent = styled(Component)`
     filter: hue-rotate(90deg);
   }
 
-  color: #fffc;
+  color: #fffd;
   padding: 16px 64px;
   border: 0;
 
