@@ -218,7 +218,6 @@ const Component: VFCX = ({ className }) => (
     {getExperienceChartDatas().map((row, i) => (
       <Glass className='item' key={i}>
         <div className='center'>
-          <div className='icon'>{row.emoji && row.emoji}</div>
           <div className='name'>{row.name}</div>
         </div>
         <div className='chart'>
@@ -240,7 +239,7 @@ const Component: VFCX = ({ className }) => (
               startAngle={180}
               endAngle={0}
               innerRadius={50}
-              outerRadius={70}
+              outerRadius={75}
               paddingAngle={0}
               dataKey='value'
             >
@@ -264,7 +263,7 @@ const Component: VFCX = ({ className }) => (
               startAngle={180}
               endAngle={360}
               innerRadius={50}
-              outerRadius={70}
+              outerRadius={75}
               paddingAngle={0}
               dataKey='value'
             >
@@ -296,6 +295,9 @@ const StyledComponent = styled(Component)`
 
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
   gap: 32px;
   justify-content: center;
   padding: 32px 0;
@@ -311,17 +313,6 @@ const StyledComponent = styled(Component)`
     line-height: 1.5em;
     position: relative;
 
-    & > .name,
-    & > .date {
-      font-size: 75%;
-    }
-
-    & > .chart,
-    & > .chart:before,
-    & > .date {
-      position: absolute;
-    }
-
     & > .center {
       position: absolute;
       top: 50%;
@@ -331,25 +322,7 @@ const StyledComponent = styled(Component)`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-size: 75%;
-      & > .icon {
-        font-size: 36px;
-      }
-    }
-
-    & > .chart {
-      top: 0;
-    }
-    & > .icon {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    & > .name {
-      top: 95px;
-    }
-    & > .date {
-      top: 120px;
+      font-size: 90%;
     }
   }
 `;

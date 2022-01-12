@@ -24,17 +24,30 @@ const StyledComponent = styled(Component)`
   .sidebar {
     min-width: 300px;
     width: 30%;
+    @media (max-width: 900px) {
+      width: 100%;
+    }
 
     .sticky {
       position: sticky;
       top: 0;
       height: 100vh;
-      border-radius: 0;
-
       padding: 10%;
+      @media (max-width: 900px) {
+        height: 60px;
+        padding: 5px 5vw;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+      border-radius: 0;
 
       h2 {
         font-size: 64px;
+        @media (max-width: 900px) {
+          font-size: 32px;
+          margin: 0;
+        }
       }
     }
   }
