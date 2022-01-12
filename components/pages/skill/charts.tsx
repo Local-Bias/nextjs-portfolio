@@ -215,8 +215,8 @@ const getExperienceChartDatas = () => {
 
 const Component: VFCX = ({ className }) => (
   <div className={className}>
-    {getExperienceChartDatas().map((row) => (
-      <Glass className='item'>
+    {getExperienceChartDatas().map((row, i) => (
+      <Glass className='item' key={i}>
         <div className='center'>
           <div className='icon'>{row.emoji && row.emoji}</div>
           <div className='name'>{row.name}</div>
