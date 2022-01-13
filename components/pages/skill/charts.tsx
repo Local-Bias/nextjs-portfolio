@@ -214,115 +214,126 @@ const getExperienceChartDatas = () => {
 };
 
 const Component: VFCX = ({ className }) => (
-  <div className={className}>
-    {getExperienceChartDatas().map((row, i) => (
-      <Glass className='item' key={i}>
-        <div className='center'>
-          <div className='name'>{row.name}</div>
+  <Glass className={className}>
+    <h3>プログラミング</h3>
+    <div>
+      {getExperienceChartDatas().map((row, i) => (
+        <div className='item' key={i}>
+          <div className='center'>
+            <div className='name'>{row.name}</div>
+          </div>
+          <div className='chart'>
+            <PieChart width={200} height={200}>
+              <defs>
+                <linearGradient id='gradationColor' x1='0%' y1='0%' x2='100%' y2='100%'>
+                  <stop offset='0%' stopColor='#8ec5fcdd' />
+                  <stop offset='100%' stopColor='#e0c3fcdd' />
+                </linearGradient>
+              </defs>
+              <Pie
+                strokeOpacity={0.6}
+                data={[
+                  { name: row.motivationLabel, value: row.motivation },
+                  { name: row.motivationLabel, value: 10 - row.motivation },
+                ]}
+                cx='50%'
+                cy='50%'
+                startAngle={180}
+                endAngle={0}
+                innerRadius={50}
+                outerRadius={75}
+                paddingAngle={0}
+                dataKey='value'
+              >
+                <Cell fill='url(#gradationColor)' />
+                <Cell fill='transparent' />
+              </Pie>
+              <Pie
+                strokeOpacity={0.6}
+                data={[
+                  {
+                    name: row.experienceLabel,
+                    value: row.experienceMillis,
+                  },
+                  {
+                    name: row.experienceLabel,
+                    value: row.experienceResidue,
+                  },
+                ]}
+                cx='50%'
+                cy='50%'
+                startAngle={180}
+                endAngle={360}
+                innerRadius={50}
+                outerRadius={75}
+                paddingAngle={0}
+                dataKey='value'
+              >
+                <Cell fill='url(#gradationColor)' />
+                <Cell fill='transparent' />
+              </Pie>
+              <Tooltip
+                contentStyle={{
+                  border: '0',
+                  backdropFilter: 'blur(8px)',
+                  backgroundColor: '#8ec5fcdd',
+                  boxShadow:
+                    'rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px',
+                }}
+                itemStyle={{ color: '#fff' }}
+                formatter={() => ''}
+                isAnimationActive={false}
+                separator=''
+              />
+            </PieChart>
+          </div>
         </div>
-        <div className='chart'>
-          <PieChart width={200} height={200}>
-            <defs>
-              <linearGradient id='gradationColor' x1='0%' y1='0%' x2='100%' y2='100%'>
-                <stop offset='0%' stopColor='#8ec5fcdd' />
-                <stop offset='100%' stopColor='#e0c3fcdd' />
-              </linearGradient>
-            </defs>
-            <Pie
-              strokeOpacity={0.6}
-              data={[
-                { name: row.motivationLabel, value: row.motivation },
-                { name: row.motivationLabel, value: 10 - row.motivation },
-              ]}
-              cx='50%'
-              cy='50%'
-              startAngle={180}
-              endAngle={0}
-              innerRadius={50}
-              outerRadius={75}
-              paddingAngle={0}
-              dataKey='value'
-            >
-              <Cell fill='url(#gradationColor)' />
-              <Cell fill='transparent' />
-            </Pie>
-            <Pie
-              strokeOpacity={0.6}
-              data={[
-                {
-                  name: row.experienceLabel,
-                  value: row.experienceMillis,
-                },
-                {
-                  name: row.experienceLabel,
-                  value: row.experienceResidue,
-                },
-              ]}
-              cx='50%'
-              cy='50%'
-              startAngle={180}
-              endAngle={360}
-              innerRadius={50}
-              outerRadius={75}
-              paddingAngle={0}
-              dataKey='value'
-            >
-              <Cell fill='url(#gradationColor)' />
-              <Cell fill='transparent' />
-            </Pie>
-            <Tooltip
-              contentStyle={{
-                border: '0',
-                backdropFilter: 'blur(8px)',
-                backgroundColor: '#8ec5fcdd',
-                boxShadow:
-                  'rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px',
-              }}
-              itemStyle={{ color: '#fff' }}
-              formatter={() => ''}
-              isAnimationActive={false}
-              separator=''
-            />
-          </PieChart>
-        </div>
-      </Glass>
-    ))}
-  </div>
+      ))}
+    </div>
+  </Glass>
 );
 
 const StyledComponent = styled(Component)`
   color: #fff;
+  padding: 64px;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
-  @media (max-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);
+  h3 {
+    font-size: 36px;
+    margin: 0;
   }
-  gap: 32px;
-  justify-content: center;
-  padding: 32px 0;
 
-  & > .item {
-    display: flex;
-    flex-direction: column;
+  > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    gap: 32px;
     justify-content: center;
-    align-items: center;
-    padding: 0.3em;
-    min-width: 200px;
-    min-height: 200px;
-    line-height: 1.5em;
-    position: relative;
+    padding: 32px 0;
 
-    & > .center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    & > .item {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-size: 90%;
+      padding: 0.3em;
+      min-width: 200px;
+      min-height: 200px;
+      line-height: 1.5em;
+      position: relative;
+
+      & > .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 90%;
+      }
     }
   }
 `;

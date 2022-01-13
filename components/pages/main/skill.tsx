@@ -72,7 +72,7 @@ const StyledComponent = styled(Component)`
 
   h2 {
     font-size: 3em;
-    color: #fffc;
+    color: #fff;
     flex: 1 1 auto;
     width: 100%;
     text-align: center;

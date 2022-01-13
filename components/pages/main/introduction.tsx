@@ -35,20 +35,24 @@ const StyledComponent = styled(Component)`
 
     width: 50%;
     height: 50%;
+    padding: 64px;
     @media (max-width: 1200px) {
-      right: 6vw;
-      width: 88vw;
+      right: 0;
+      width: 90vw;
+      padding: 5vw;
+      border-radius: 0;
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
     }
 
     transition: all 250ms ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 64px;
 
     h1,
     p {
-      filter: drop-shadow(0 1px 3px #0007);
+      color: #fff;
     }
 
     h1 {

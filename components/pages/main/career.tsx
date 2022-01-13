@@ -63,7 +63,7 @@ const StyledComponent = styled(Component)`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 10vh;
+      gap: 7vh;
     }
   }
 
@@ -82,7 +82,7 @@ const StyledComponent = styled(Component)`
   gap: 10vh;
 
   .items {
-    padding: 5vh 0 5vh 3vw;
+    padding: 5vh 0 5vh 60px;
     flex: 1 1 auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -115,11 +115,11 @@ const StyledComponent = styled(Component)`
       :before {
         content: '';
         position: absolute;
-        left: calc(5px - 3vw);
+        left: -56px;
         top: 50%;
         transform: translate(-50%, -50%);
 
-        background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+        background: #fff;
         border-radius: 50%;
         width: 50px;
         height: 50px;
