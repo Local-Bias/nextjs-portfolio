@@ -9,8 +9,10 @@ type Props = ContainerProps & Readonly<{}>;
 const Component: VFCX<Props> = ({ className }) => (
   <div {...{ className }}>
     <Glass className='introduction'>
-      <h1>Ribbit</h1>
-      <p>Front-End Engineer. Open source contributor</p>
+      <div>
+        <h1>Ribbit</h1>
+        <p>Front-End Engineer. Open source contributor</p>
+      </div>
       <div className='contact-button'>
         <GlassButton disabled>Contact</GlassButton>
       </div>
@@ -22,16 +24,17 @@ const StyledComponent = styled(Component)`
   position: relative;
   height: 100vh;
   overflow: hidden;
+
   .contact-button {
-    padding: 1em;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    align-items: flex-end;
   }
 
   .introduction {
     position: absolute;
     right: 72px;
-    bottom: 10%;
+    bottom: calc(5vh + 64px);
 
     width: 50%;
     height: 50%;
@@ -47,8 +50,8 @@ const StyledComponent = styled(Component)`
 
     transition: all 250ms ease;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 
     h1,
     p {
