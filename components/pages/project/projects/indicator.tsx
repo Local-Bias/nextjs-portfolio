@@ -19,11 +19,12 @@ const Component: VFCX<Props> = ({ className, indicator }) => (
 const StyledComponent = styled(Component)`
   display: flex;
   flex-direction: column;
-  gap: 36px;
-  padding: 36px;
+  gap: 24px;
+  padding: 24px;
+  max-width: 50%;
   @media (max-width: 1200px) {
-    padding: 3vmin;
-    gap: 3vmin;
+    padding: 2vmin;
+    gap: 2vmin;
   }
 
   > .title {

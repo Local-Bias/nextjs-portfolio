@@ -4,6 +4,7 @@ import { Glass } from '../../../common/glass';
 import { PROJECTS } from '../../../../contents/project';
 
 import Indicator from './indicator';
+import { GlassButton } from '../../../common/glass-button';
 
 const Component: VFCX = ({ className }) => (
   <div {...{ className }}>
@@ -12,6 +13,13 @@ const Component: VFCX = ({ className }) => (
         <Glass>
           <h3>{project.title}</h3>
           <p>{project.description}</p>
+          {!!project.link && (
+            <div className='link'>
+              <a href={project.link} target='_blank' rel='nofollow noopener noreferrer'>
+                <GlassButton>{project.linkLabel || 'Label'}</GlassButton>
+              </a>
+            </div>
+          )}
         </Glass>
         <div className='project-property'>
           {!!project.indicators &&
@@ -36,19 +44,22 @@ const StyledComponent = styled(Component)`
     align-items: streach;
 
     > div {
-      flex: 1;
-
       &:nth-of-type(1) {
         margin-bottom: -15%;
         padding: 32px;
         padding-bottom: calc(15% + 32px);
+
+        > .link {
+          width: 100%;
+          text-align: center;
+        }
       }
 
       &:nth-of-type(2) {
         padding: 0 0 32px 32px;
         display: flex;
         justify-content: flex-end;
-        gap: 32px;
+        gap: 16px;
       }
     }
   }

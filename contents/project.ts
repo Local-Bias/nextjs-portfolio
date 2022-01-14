@@ -8,6 +8,8 @@ export type Project = {
   title: string;
   description: string;
   indicators?: Indicator[];
+  link?: string;
+  linkLabel?: string;
 };
 
 export const PROJECTS: Project[] = [
@@ -18,7 +20,7 @@ export const PROJECTS: Project[] = [
     indicators: [
       {
         value: 97,
-        unit: '点',
+        unit: '/100点',
         description: 'Google PageSpeed Insightsで計測したモバイル版のサイトパフォーマンス',
       },
     ],
@@ -28,8 +30,8 @@ export const PROJECTS: Project[] = [
     description:
       '株式会社サイボウズの提供しているクラウドサービス「Kintone」で利用可能なプラグインを開発しています。導入実績は2022年1月に200社を超えました。',
     indicators: [
-      { value: 210, unit: '社', description: 'ご利用いただいた企業数' },
-      { value: 228000, unit: '回', description: 'プラグインが実行された回数' },
+      { value: 221, unit: '社', description: 'ご利用いただいた企業数' },
+      { value: 231302, unit: '回', description: 'プラグインが実行された回数' },
     ],
   },
   {
@@ -50,5 +52,12 @@ export const PROJECTS: Project[] = [
     title: 'WEBセミナー',
     description:
       'ITを活用した業務効率化をテーマに、中小企業向けのWEBセミナーの講師を担当しました。',
+  },
+  {
+    title: '旧ポートフォリオ',
+    description:
+      'このサイトを作成する前のポートフォリオサイトです。Gatsby.jsで作成、GitHubでリポジトリ管理、netlifyでデプロイを行いました。',
+    link: 'https://ribbitlify.netlify.ap',
+    linkLabel: '実際のサイトはこちら',
   },
 ];
