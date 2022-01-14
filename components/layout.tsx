@@ -30,6 +30,7 @@ const Component: FCX<Props> = ({ className, children }) => (
 
 const StyledComponent = styled(Component)`
   > footer {
+    margin-top: 10vh;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
