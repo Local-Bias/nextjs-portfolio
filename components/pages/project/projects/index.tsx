@@ -15,7 +15,7 @@ const Component: VFCX = ({ className }) => (
         </Glass>
         <div className='project-property'>
           {!!project.indicators &&
-            project.indicators.map((indicator, key) => <Indicator {...{ key, indicator }} />)}
+            project.indicators.map((indicator, j) => <Indicator key={j} indicator={indicator} />)}
         </div>
       </div>
     ))}
