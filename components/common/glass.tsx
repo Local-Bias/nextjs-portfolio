@@ -22,7 +22,7 @@ const StyledComponent = styled(Component)`
       ${({ depth }) => `#ddd${depth}`}
     ),
     radial-gradient(circle, #0003, transparent);
-  color: #fffc;
+  color: #fff;
 `;
 
 const Container: FCX<ContainerProps> = ({ depth = 3, elevation = 1, ...others }) => {

@@ -33,7 +33,7 @@ const StyledComponent = styled(Component)`
 
   .introduction {
     position: absolute;
-    right: 72px;
+    right: 3vw;
     bottom: calc(5vh + 64px);
 
     width: 50%;

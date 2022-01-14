@@ -80,7 +80,7 @@ const StyledComponent = styled(Component)`
 
   h2 {
     font-size: 3em;
-    color: #fffc;
+    color: #fff;
     filter: drop-shadow(0 2px 3px #0005);
     width: 100%;
     text-align: center;
@@ -125,7 +125,7 @@ const StyledComponent = styled(Component)`
       justify-content: center;
 
       > div {
-        filter: drop-shadow(0 1px 2px #000a);
+        filter: drop-shadow(0 1px 2px #0004);
       }
     }
   }
