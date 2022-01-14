@@ -1,18 +1,45 @@
-export const PROJECTS = [
+export type Indicator = {
+  value: number;
+  unit: string;
+  description: string;
+};
+
+export type Project = {
+  title: string;
+  description: string;
+  indicators?: Indicator[];
+};
+
+export const PROJECTS: Project[] = [
   {
     title: 'このサイト',
     description:
       '以前はGatsby.jsで作成していましたが、デザインを一新するタイミングでNext.jsに変更しました。グラスモーフィズムを中心にデザインを考えてみました。 デプロイはVercelです。',
+    indicators: [
+      {
+        value: 97,
+        unit: '点',
+        description: 'Google PageSpeed Insightsで計測したモバイル版のサイトパフォーマンス',
+      },
+    ],
   },
   {
     title: 'Kintoneプラグイン',
     description:
       '株式会社サイボウズの提供しているクラウドサービス「Kintone」で利用可能なプラグインを開発しています。導入実績は2022年1月に200社を超えました。',
+    indicators: [
+      { value: 210, unit: '社', description: 'ご利用いただいた企業数' },
+      { value: 228000, unit: '回', description: 'プラグインが実行された回数' },
+    ],
   },
   {
     title: 'ブログ',
     description:
       'ホスティングはGatsbyCloud、コンテンツ管理はContentful、プログラムはGithubという構成で作成。月の閲覧数は5,000程です。',
+    indicators: [
+      { value: 79, unit: '記事', description: '掲載している記事の数' },
+      { value: 5200, unit: 'view/月', description: '月あたりの閲覧数' },
+    ],
   },
   {
     title: 'チャットボット',

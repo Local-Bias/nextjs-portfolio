@@ -15,7 +15,7 @@ const Component: VFCX<Props> = ({ className }) => (
         <div>
           <h2>Projects</h2>
           <Link href='/project/'>
-            <GlassButton disabled>詳細ページは準備中です</GlassButton>
+            <GlassButton>Details</GlassButton>
           </Link>
         </div>
       </div>

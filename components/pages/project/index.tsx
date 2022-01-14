@@ -1,27 +1,17 @@
-import React, { VFC, VFCX } from 'react';
-import styled from '@emotion/styled';
+import React, { VFC } from 'react';
+import imageData from '../../../public/images/project.jpg';
 
-import BackgroundImage from './background-image';
-import Introduction from './introduction';
-import Skill from './skill';
-import Project from './project';
+import Layout from './layout';
+import Charts from './projects';
+import { BackgroundImage } from '../../common/background-image';
 
-type ContainerProps = Readonly<{}>;
-type Props = ContainerProps & Readonly<{}>;
-
-const Component: VFCX<Props> = ({ className }) => (
-  <div {...{ className }}>
-    <BackgroundImage />
-    <Introduction />
-    <Skill />
-    <Project />
-  </div>
+const Component: VFC = () => (
+  <>
+    <BackgroundImage imageData={imageData} />
+    <Layout>
+      <Charts />
+    </Layout>
+  </>
 );
 
-const StyledComponent = styled(Component)``;
-
-const Container: VFC<ContainerProps> = () => {
-  return <StyledComponent />;
-};
-
-export default Container;
+export default Component;
