@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { Glass } from '../../common/glass';
 
 const Component: VFCX = ({ className }) => (
-  <Glass className={className}>
+  <Glass {...{ className }}>
     <h3>資格</h3>
     <div>
       <p>日商簿記2級</p>

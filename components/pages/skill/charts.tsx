@@ -214,7 +214,7 @@ const getExperienceChartDatas = () => {
 };
 
 const Component: VFCX = ({ className }) => (
-  <Glass className={className}>
+  <Glass {...{ className }}>
     <h3>プログラミング</h3>
     <div>
       {getExperienceChartDatas().map((row, i) => (
