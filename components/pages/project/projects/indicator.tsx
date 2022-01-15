@@ -7,7 +7,7 @@ type ContainerProps = Readonly<{ indicator: Indicator }>;
 type Props = ContainerProps & Readonly<{}>;
 
 const Component: VFCX<Props> = ({ className, indicator }) => (
-  <Glass {...{ className }}>
+  <Glass {...{ className }} depth={0}>
     <div className='title'>
       <h4>{indicator.value.toLocaleString()}</h4>
       <span className='unit'>{indicator.unit}</span>

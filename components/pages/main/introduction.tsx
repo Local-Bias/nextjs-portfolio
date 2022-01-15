@@ -8,7 +8,7 @@ type Props = ContainerProps & Readonly<{}>;
 
 const Component: VFCX<Props> = ({ className }) => (
   <div {...{ className }}>
-    <Glass className='introduction'>
+    <Glass className='introduction' depth={0} blur={12}>
       <div>
         <h1>Ribbit</h1>
         <p>Front-End Engineer. Open source contributor</p>

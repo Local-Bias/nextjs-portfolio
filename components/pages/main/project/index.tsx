@@ -21,24 +21,11 @@ const Component: VFCX<Props> = ({ className }) => (
       </div>
       <div className='items'>
         {PROJECTS.map((project, i) => (
-          <Glass key={i}>
+          <Glass key={i} depth={0}>
             <h3>{project.title}</h3>
             <div>{project.description}</div>
           </Glass>
         ))}
-        <Glass>
-          <h3>旧ポートフォリオ</h3>
-          <div>
-            このサイトを作成する前のポートフォリオサイトです。Gatsby.jsで作成、GitHubでリポジトリ管理、netlifyでデプロイを行いました。
-          </div>
-          <a
-            href='https://ribbitlify.netlify.app'
-            target='_blank'
-            rel='nofollow noopener noreferrer'
-          >
-            <GlassButton>実際のサイトはこちら</GlassButton>
-          </a>
-        </Glass>
       </div>
     </div>
   </div>

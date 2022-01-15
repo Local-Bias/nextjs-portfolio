@@ -1,13 +1,13 @@
 import React, { FCX } from 'react';
 import styled from '@emotion/styled';
 
-type ContainerProps = Readonly<{ depth?: number; elevation?: number }>;
-type Props = Readonly<{ depth: number; elevation: number }>;
+type ContainerProps = Readonly<{ depth?: number; elevation?: number; blur?: number }>;
+type Props = Readonly<{ depth: number; elevation: number; blur: number }>;
 
 const Component: FCX<Props> = ({ className, children }) => <div {...{ className }}>{children}</div>;
 
 const StyledComponent = styled(Component)`
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(${({ blur }) => blur}px);
   box-shadow: ${({ elevation }) =>
     elevation === 1
       ? '0 2px 3px -1px #0002, 0 3px 5px 1px #0002'
@@ -21,12 +21,12 @@ const StyledComponent = styled(Component)`
       ${({ depth }) => `#fff${depth}`} 60%,
       ${({ depth }) => `#ddd${depth}`}
     ),
-    radial-gradient(circle, #0003, transparent);
+    radial-gradient(circle, transparent 20%, #0002);
   color: #fff;
 `;
 
-const Container: FCX<ContainerProps> = ({ depth = 3, elevation = 1, ...others }) => {
-  return <StyledComponent {...{ depth, elevation, ...others }} />;
+const Container: FCX<ContainerProps> = ({ depth = 3, elevation = 1, blur = 8, ...others }) => {
+  return <StyledComponent {...{ depth, elevation, blur, ...others }} />;
 };
 
 export const Glass = Container;
