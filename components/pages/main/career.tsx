@@ -15,7 +15,7 @@ const Component: VFCX<Props> = ({ className }) => (
         <div>
           <h2>Career</h2>
           <Link href='/career/'>
-            <GlassButton disabled>詳細ページは準備中です</GlassButton>
+            <GlassButton>詳細ページは準備中です</GlassButton>
           </Link>
         </div>
       </div>
@@ -69,7 +69,7 @@ const StyledComponent = styled(Component)`
 
   h2 {
     font-size: 3em;
-    color: #fffc;
+    color: #fff;
     filter: drop-shadow(0 2px 3px #0005);
     width: 100%;
     text-align: center;
