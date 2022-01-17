@@ -42,6 +42,8 @@ export const PROJECTS: Project[] = [
       { value: 79, unit: '記事', description: '掲載している記事の数' },
       { value: 5200, unit: 'view/月', description: '月あたりの閲覧数' },
     ],
+    link: 'https://ribbit.work',
+    linkLabel: 'サイトはこちら',
   },
   {
     title: 'チャットボット',
@@ -57,7 +59,7 @@ export const PROJECTS: Project[] = [
     title: '旧ポートフォリオ',
     description:
       'このサイトを作成する前のポートフォリオサイトです。Gatsby.jsで作成、GitHubでリポジトリ管理、netlifyでデプロイを行いました。',
-    link: 'https://ribbitlify.netlify.ap',
-    linkLabel: '実際のサイトはこちら',
+    link: 'https://ribbitlify.netlify.app',
+    linkLabel: 'サイトはこちら',
   },
 ];
