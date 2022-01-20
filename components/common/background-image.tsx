@@ -9,8 +9,7 @@ const Component: VFCX<Props> = ({ className, imageData }) => (
     <Image
       src={imageData}
       alt='background-image'
-      width={2400}
-      height={1350}
+      layout='fill'
       objectFit='cover'
       placeholder='blur'
       quality={100}
