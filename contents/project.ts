@@ -30,8 +30,8 @@ export const PROJECTS: Project[] = [
     description:
       '株式会社サイボウズの提供しているクラウドサービス「Kintone」で利用可能なプラグインを開発しています。導入実績は2022年1月に200社を超えました。',
     indicators: [
-      { value: 221, unit: '社', description: 'ご利用いただいた企業数' },
-      { value: 231302, unit: '回', description: 'プラグインが実行された回数' },
+      { value: 233, unit: '社', description: 'ご利用いただいた企業数' },
+      { value: 342119, unit: '回', description: 'プラグインが実行された回数' },
     ],
   },
   {
