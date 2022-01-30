@@ -1,19 +1,29 @@
 import React, { VFC } from 'react';
 import imageData from '../../../public/images/cactuses.jpg';
 
-import Introduction from './introduction';
+import ATB from './atf';
 import Skill from './skill';
 import Project from './project';
 import Career from './career';
 import { BackgroundImage } from '../../common/background-image';
+import { useSetRecoilState } from 'recoil';
+import { currentPageState } from '../../../states/current-page';
 
 const Component: VFC = () => (
   <>
     <BackgroundImage imageData={imageData} />
-    <Introduction />
+    <ATB />
     <Skill />
     <Project />
     <Career />
   </>
 );
-export default Component;
+
+const Container: VFC = () => {
+  const setCurrentPage = useSetRecoilState(currentPageState);
+  setCurrentPage('Home');
+
+  return <Component />;
+};
+
+export default Container;

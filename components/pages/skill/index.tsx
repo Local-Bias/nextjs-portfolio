@@ -5,6 +5,8 @@ import Layout from './layout';
 import Charts from './charts';
 import Qualifications from './qualifications';
 import { BackgroundImage } from '../../common/background-image';
+import { useSetRecoilState } from 'recoil';
+import { currentPageState } from '../../../states/current-page';
 
 const Component: VFC = () => (
   <>
@@ -16,4 +18,11 @@ const Component: VFC = () => (
   </>
 );
 
-export default Component;
+const Container: VFC = () => {
+  const setCurrentPage = useSetRecoilState(currentPageState);
+  setCurrentPage('Skill');
+
+  return <Component />;
+};
+
+export default Container;

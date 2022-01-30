@@ -14,6 +14,7 @@ const Component: FCX = ({ className, children }) => (
 );
 
 const StyledComponent = styled(Component)`
+  padding-left: 100px;
   display: flex;
   @media (max-width: 900px) {
     flex-direction: column;

@@ -33,6 +33,7 @@ const Component: VFCX<Props> = ({ className }) => (
 );
 
 const StyledComponent = styled(Component)`
+  padding-left: 100px;
   min-height: 100vh;
 
   .contents {
