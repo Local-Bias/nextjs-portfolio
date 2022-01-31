@@ -6,8 +6,8 @@ type Props = ContainerProps & Readonly<{ indicators: Indicator[] }>;
 
 const Component: VFCX<ContainerProps> = ({ className }) => {
   const indicators = [
-    { number: 282, unit: 'companies' },
-    { number: 432414, unit: 'actions' },
+    { number: 330, unit: 'companies' },
+    { number: 455161, unit: 'actions' },
     { number: 5200, unit: 'persons/month' },
   ];
 

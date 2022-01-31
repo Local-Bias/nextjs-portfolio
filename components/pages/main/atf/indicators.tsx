@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 import useSWR from 'swr';
 import Skeleton from '@mui/material/Skeleton';
 
+import Offline from './indicators-offline';
+
 type ContainerProps = Readonly<{}>;
 type Props = ContainerProps & Readonly<{ indicators: Indicator[] }>;
 
@@ -12,10 +14,10 @@ const fetcher = async (url: string) => {
 };
 
 const Component: VFCX<ContainerProps> = ({ className }) => {
-  const { data, error } = useSWR<Indicator[]>('/api/indicators', fetcher);
+  const { data, error } = useSWR<Indicator[]>('/api/gas-bridge', fetcher);
 
   if (error) {
-    return <div>データが取得できませんでした</div>;
+    return <Offline />;
   }
   if (!data) {
     return (

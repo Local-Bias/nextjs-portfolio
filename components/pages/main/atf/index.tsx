@@ -2,7 +2,7 @@ import React, { VFC, VFCX } from 'react';
 import styled from '@emotion/styled';
 import { NAME } from '../../../../static/me';
 
-import Indicators from './indicators-offline';
+import Indicators from './indicators';
 
 type ContainerProps = Readonly<{}>;
 type Props = ContainerProps & Readonly<{}>;
