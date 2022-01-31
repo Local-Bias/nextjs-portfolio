@@ -28,7 +28,6 @@ const Component: VFCX<Props> = ({ className }) => (
 
 const StyledComponent = styled(Component)`
   grid-area: footer;
-  margin-top: 10vh;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
