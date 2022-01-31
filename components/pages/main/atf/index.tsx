@@ -17,7 +17,7 @@ const Component: VFCX<Props> = ({ className }) => (
         </div>
         <h1>
           <div className='name'>{NAME}</div>
-          <div>influence</div>
+          <div>had an influence on</div>
         </h1>
       </div>
     </div>
@@ -31,6 +31,9 @@ const StyledComponent = styled(Component)`
   padding-left: 100px;
   display: grid;
   grid-template-columns: 40vw 1fr;
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
   height: 100vh;
   color: #012d;
   background-color: #f2f6ff;

@@ -38,7 +38,7 @@ const StyledComponent = styled(Component)`
 
   .contents {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     @media (max-width: 1000px) {
       flex-direction: column;
     }

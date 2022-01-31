@@ -5,6 +5,7 @@ import ATB from './atf';
 import Skill from './skill';
 import Project from './project';
 import Career from './career';
+import Service from './service';
 import { BackgroundImage } from '../../common/background-image';
 import { useSetRecoilState } from 'recoil';
 import { currentPageState } from '../../../states/current-page';
@@ -13,8 +14,9 @@ const Component: VFC = () => (
   <>
     <BackgroundImage imageData={imageData} />
     <ATB />
-    <Skill />
+    <Service />
     <Project />
+    <Skill />
     <Career />
   </>
 );

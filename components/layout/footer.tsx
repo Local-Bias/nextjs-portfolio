@@ -4,13 +4,14 @@ import { TwitterIcon } from '../common/icon/twitter';
 import { GithubIcon } from '../common/icon/github';
 import { ZennIcon } from '../common/icon/zenn';
 import { SOCIAL } from '../../contents/social';
+import { NAME } from '../../static/me';
 
 type ContainerProps = Readonly<{}>;
 type Props = ContainerProps & Readonly<{}>;
 
 const Component: VFCX<Props> = ({ className }) => (
   <footer {...{ className }}>
-    <div>Copyright © 2022 Ribbit All Rights Reserved.</div>
+    <div>Copyright © 2022 {NAME} All Rights Reserved.</div>
     <div className='social-icons'>
       <a target='_blank' rel='nofollow noopener noreferrer' href={SOCIAL.twitter}>
         <TwitterIcon />
