@@ -54,6 +54,7 @@ const StyledComponent = styled(Component)`
     display: flex;
     align-items: flex-end;
     gap: 8px;
+    animation: appear 250ms ease;
 
     > div {
       font-weight: 600;
@@ -65,6 +66,15 @@ const StyledComponent = styled(Component)`
       &:nth-of-type(2) {
         font-size: 3vw;
       }
+    }
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 `;
