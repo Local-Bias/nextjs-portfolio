@@ -78,7 +78,8 @@ const StyledComponent = styled(Component)`
     @media (max-width: 1000px) {
       flex-direction: column;
     }
-    width: 95vw;
+    width: 1600px;
+    max-width: 95vw;
     margin: auto;
     gap: 32px;
 
