@@ -70,6 +70,7 @@ const StyledComponent = styled(Component)`
   display: grid;
   grid-template-columns: 40vw 1fr;
   @media (max-width: 1000px) {
+    padding: 10vh 32px 10vh 32px;
     grid-template-columns: 1fr;
   }
   min-height: 100vh;

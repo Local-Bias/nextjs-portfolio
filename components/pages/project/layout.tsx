@@ -18,6 +18,7 @@ const StyledComponent = styled(Component)`
   display: flex;
   @media (max-width: 900px) {
     flex-direction: column;
+    padding: 0;
   }
   min-height: 100vh;
 

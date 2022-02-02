@@ -43,6 +43,9 @@ const Component: VFCX<Props> = ({ className }) => (
 
 const StyledComponent = styled(Component)`
   padding: 5vh 20px 10vh 100px;
+  @media (max-width: 1000px) {
+    padding: 5vh 20px 10vh 20px;
+  }
   background-color: #fffc;
   backdrop-filter: blur(16px);
   color: #012d;

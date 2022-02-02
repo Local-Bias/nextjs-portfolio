@@ -35,6 +35,9 @@ const Component: VFCX<Props> = ({ className }) => (
 
 const StyledComponent = styled(Component)`
   padding-left: 100px;
+  @media (max-width: 1000px) {
+    padding: 0;
+  }
   min-height: 100vh;
   background-color: #fff;
   color: #012d;

@@ -29,12 +29,17 @@ const Component: VFCX<Props> = ({ className, currentPage }) => (
 const StyledComponent = styled(Component)`
   position: fixed;
   z-index: 100;
-  top: 0;
+  bottom: 0;
   height: 100vh;
   display: flex;
   align-items: center;
   width: 100px;
   justify-content: center;
+
+  @media (max-width: 1000px) {
+    height: 80px;
+    width: 100vw;
+  }
 
   > div {
     top: 0;
@@ -48,6 +53,12 @@ const StyledComponent = styled(Component)`
     border-radius: 1000px;
     writing-mode: vertical-rl;
     padding: 5px;
+    @media (max-width: 1000px) {
+      height: 80px;
+      width: 100vw;
+      writing-mode: initial;
+      border-radius: 0;
+    }
   }
 
   .nav-items > div {
@@ -62,6 +73,9 @@ const StyledComponent = styled(Component)`
     font-weight: 700;
     &.current {
       background-color: #fffa;
+    }
+
+    @media (max-width: 1000px) {
     }
   }
 `;
