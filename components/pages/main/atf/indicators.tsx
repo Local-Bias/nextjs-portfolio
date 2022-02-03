@@ -26,7 +26,6 @@ const Indicator: VFCX<{ indicator: Indicator }> = ({ className, indicator }) => 
 );
 
 const StyledIndicator = styled(Indicator)`
-  padding: 32px;
   display: flex;
   align-items: flex-end;
   @media (max-width: 1400px) {
@@ -40,11 +39,26 @@ const StyledIndicator = styled(Indicator)`
     line-height: 1.05;
     &:nth-of-type(1) {
       font-size: 120px;
+      @media (max-width: 800px) {
+        font-size: 100px;
+      }
+      @media (max-width: 600px) {
+        font-size: 80px;
+      }
       font-weight: 600;
-      color: #00cb8f;
+      color: #acb6e5;
+      background: linear-gradient(15deg, #acb6e5, #64bde4); //背景色にグラデーションを指定
+      background-clip: text;
+      text-fill-color: transparent;
     }
     &:nth-of-type(2) {
       font-size: 60px;
+      @media (max-width: 800px) {
+        font-size: 50px;
+      }
+      @media (max-width: 600px) {
+        font-size: 40px;
+      }
     }
   }
 
@@ -74,7 +88,7 @@ const Component: VFCX<ContainerProps> = ({ className }) => {
   if (!data) {
     return (
       <div {...{ className }}>
-        <CircularProgress sx={{ color: '#00cb8f' }} />
+        <CircularProgress sx={{ color: '#acb6e5' }} />
       </div>
     );
   }

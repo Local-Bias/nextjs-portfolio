@@ -24,6 +24,9 @@ const StyledIntroduction = styled(Introduction)`
   display: flex;
   justify-content: flex-start;
   gap: 32px;
+  @media (max-width: 800px) {
+    gap: 4vw;
+  }
 
   > div {
     &:nth-of-type(1) {
@@ -68,9 +71,11 @@ const Component: VFCX<Props> = ({ className }) => (
 const StyledComponent = styled(Component)`
   padding: 10vh 32px 10vh 132px;
   display: grid;
+  gap: 32px;
   grid-template-columns: 40vw 1fr;
-  @media (max-width: 1000px) {
-    padding: 10vh 32px 10vh 32px;
+  @media (max-width: 800px) {
+    padding: 8vh 4vw 8vh 4vw;
+    gap: 4vw;
     grid-template-columns: 1fr;
   }
   min-height: 100vh;

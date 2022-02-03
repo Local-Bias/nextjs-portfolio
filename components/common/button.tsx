@@ -24,7 +24,7 @@ const StyledComponent = styled(Component)`
 
   border: 0;
   border-radius: 1000px;
-  background: linear-gradient(45deg, #00cb8f, #10cb8f);
+  background: linear-gradient(45deg, #acb6e5, #64bde4);
   color: #fff;
   padding: 16px 64px;
   box-shadow: 0 10px 10px -5px #0001, 0 12px 15px -8px #0001, 0 20px 20px -10px #0001;
