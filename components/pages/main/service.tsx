@@ -20,6 +20,9 @@ const StyledServices = styled(Services)`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 64px;
+  @media (max-width: 1000px) {
+    gap: 4vw;
+  }
   max-width: 1000px;
 
   > div {
