@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
     description:
       'ホスティングはGatsbyCloud、コンテンツ管理はContentful、プログラムはGithubという構成で作成。月の閲覧数は5,000程です。',
     indicators: [
-      { value: 79, unit: '記事', description: '掲載している記事の数' },
+      { value: 82, unit: '記事', description: '掲載している記事の数' },
       { value: 5200, unit: 'view/月', description: '月あたりの閲覧数' },
     ],
     link: 'https://ribbit.work',
