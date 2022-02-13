@@ -9,6 +9,7 @@ const Services: VFCX = ({ className }) => (
   <div {...{ className }}>
     {SERVICES.map((service, i) => (
       <div key={i}>
+        <div className='emoji'>{service.emoji}</div>
         <h3>{service.title}</h3>
         <div>{service.description}</div>
       </div>
@@ -19,11 +20,18 @@ const Services: VFCX = ({ className }) => (
 const StyledServices = styled(Services)`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   gap: 64px;
   @media (max-width: 1000px) {
     gap: 4vw;
   }
   max-width: 1000px;
+
+  .emoji {
+    font-size: 80px;
+  }
 
   > div {
     display: flex;
@@ -32,7 +40,7 @@ const StyledServices = styled(Services)`
     align-items: center;
     box-shadow: 0 2px 5px -1px #0003, 0 3px 8px -2px #0002;
     background-color: #fff;
-    padding: 2em;
+    padding: 1em 3em 3em;
     border-radius: 4px;
   }
 `;

@@ -63,6 +63,7 @@ export type Service = {
   title: string;
   description: string;
   imageName?: string;
+  emoji: string;
 };
 
 export const SERVICES: Service[] = [
@@ -71,23 +72,27 @@ export const SERVICES: Service[] = [
     description:
       '企業サイト、個人ブログ、LPなど、Webサイト制作全般に経験があります。高速でSEOを意識したサイト制作が可能です。',
     imageName: 'programming.jpg',
+    emoji: '📃',
   },
   {
     title: 'ウェブアプリ開発',
     description:
       'フロントエンド・バックエンドともに開発経験があるため、データベースやAPIを活用したウェブアプリケーションの開発が可能です。',
     imageName: 'programming.jpg',
+    emoji: '📱',
   },
   {
     title: '自動化ツール・シナリオ作成',
     description:
       'クラウド・オンプレミス問わず、ソフトウェアを使用するPC上の業務を自動化するためのシナリオ作成とツール開発が可能です。',
     imageName: 'programming.jpg',
+    emoji: '🔧',
   },
   {
     title: '業務効率化',
     description:
       '税理士法人に所属し、多くの関与先法人の社内IT環境を検討・改善した経験から、経理・人事労務・請求業務の効率化するためのサービスの選定・導入サポートが可能です。',
     imageName: 'programming.jpg',
+    emoji: ' 🐎',
   },
 ];
