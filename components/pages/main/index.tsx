@@ -10,10 +10,12 @@ import { BackgroundImage } from '../../common/background-image';
 import { useSetRecoilState } from 'recoil';
 import { currentPageState } from '../../../states/current-page';
 
-const Component: VFC = () => (
+type Props = Readonly<{ indicators: Indicator[] }>;
+
+const Component: VFC<Props> = ({ indicators }) => (
   <>
     <BackgroundImage imageData={imageData} />
-    <ATB />
+    <ATB indicators={indicators} />
     <Service />
     <Project />
     <Skill />
@@ -21,11 +23,11 @@ const Component: VFC = () => (
   </>
 );
 
-const Container: VFC = () => {
+const Container: VFC<Props> = (props) => {
   const setCurrentPage = useSetRecoilState(currentPageState);
   setCurrentPage('Home');
 
-  return <Component />;
+  return <Component {...props} />;
 };
 
 export default Container;

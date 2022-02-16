@@ -4,7 +4,7 @@ import { NAME } from '../../../../static/me';
 
 import Indicators from './indicators';
 
-type ContainerProps = Readonly<{}>;
+type ContainerProps = Readonly<{ indicators: Indicator[] }>;
 type Props = ContainerProps & Readonly<{}>;
 
 const Introduction: VFCX = ({ className }) => (
@@ -61,10 +61,10 @@ const StyledIntroduction = styled(Introduction)`
   }
 `;
 
-const Component: VFCX<Props> = ({ className }) => (
+const Component: VFCX<Props> = ({ className, indicators }) => (
   <div {...{ className }}>
     <StyledIntroduction />
-    <Indicators />
+    <Indicators indicators={indicators} />
   </div>
 );
 
@@ -83,8 +83,8 @@ const StyledComponent = styled(Component)`
   background-color: #f2f6ff;
 `;
 
-const Container: VFC<ContainerProps> = () => {
-  return <StyledComponent />;
+const Container: VFC<ContainerProps> = (props) => {
+  return <StyledComponent {...props} />;
 };
 
 export default Container;
