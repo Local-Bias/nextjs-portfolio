@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
       { value: 82, unit: '記事', description: '掲載している記事の数' },
       { value: 5200, unit: 'view/月', description: '月あたりの閲覧数' },
     ],
-    link: 'https://ribbit.work',
+    link: 'https://ribbit.konomi.app',
     linkLabel: 'サイトはこちら',
   },
   {
