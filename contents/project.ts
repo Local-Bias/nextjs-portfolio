@@ -16,7 +16,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'このサイト',
     description:
-      '以前はGatsby.jsで作成していましたが、デザインを一新するタイミングでNext.jsに変更しました。グラスモーフィズムを中心にデザインを考えてみました。 デプロイはVercelです。',
+      '以前はGatsby.jsで作成していましたが、デザインを一新するタイミングでNext.jsに変更しました。 デプロイはVercelです。',
     indicators: [
       {
         value: 97,
@@ -28,7 +28,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Kintoneプラグイン',
     description:
-      '株式会社サイボウズの提供しているクラウドサービス「Kintone」で利用可能なプラグインを開発しています。導入実績は2022年1月に200社を超えました。',
+      '株式会社サイボウズの提供しているクラウドサービス「Kintone」で利用可能なプラグインを開発しています。導入実績は2022年4月に500社を超えました。',
     indicators: [
       { value: 233, unit: '社', description: 'ご利用いただいた企業数' },
       { value: 342119, unit: '回', description: 'プラグインが実行された回数' },
