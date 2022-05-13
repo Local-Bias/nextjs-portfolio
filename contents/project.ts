@@ -14,6 +14,14 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
+    title: 'ウェブアプリ kula',
+    description:
+      '株式会社サイボウズの提供しているクラウドサービス「kintone」との連携を想定したウェブアプリを運営しています。Next.jsとFirebaseを使って開発しました。',
+    indicators: [],
+    link: 'https://kula.konomi.app',
+    linkLabel: 'サイトはこちら',
+  },
+  {
     title: 'このサイト',
     description:
       '以前はGatsby.jsで作成していましたが、デザインを一新するタイミングでNext.jsに変更しました。 デプロイはVercelです。',
